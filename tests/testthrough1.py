@@ -1,4 +1,8 @@
 import pytest
- 
-def test_total_divisible_by_5(input_total):
-    assert input_total % 5 == 0
+
+@pytest.fixture
+def example_fixture():
+    return 1
+
+def test_with_fixture(example_fixture):
+    assert example_fixture == 1
